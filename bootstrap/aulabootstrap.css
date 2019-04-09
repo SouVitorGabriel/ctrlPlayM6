@@ -1,0 +1,98 @@
+.cor{
+    background-color: plum;
+    border: 1px solid black;
+    height: 100%;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* .grid-container{
+    display: grid;
+    grid-template-areas:
+        'header header header header header header'
+        'left left middle middle right right'
+        'footer footer footer footer footer footer';
+    grid-gap: 5px;
+}
+
+@media (max-width: 600px) {
+    .grid-container{
+        grid-template-areas:
+            'header header header header header header'
+            'left left left left left left'
+            'middle middle middle middle middle middle'
+            'right right right right right right'
+            'footer footer footer footer footer footer';
+        grid-gap: 5px;  
+    }
+}
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Comic Sans MS";
+    background-color: #000000;
+}
+
+.navzita{
+    position: fixed;
+    width: 100%;
+    background-color: #518254;
+    padding: 20px;
+    text-align: center;
+}
+
+.header{
+    grid-area: header;
+    background-color: #af422e;
+    margin-top: 65px;
+    padding: 20px;
+    text-align: center;
+}
+
+.esquerda{
+    grid-area: left;
+    background-color: #b2bb34;
+    text-align: left;
+}
+
+.meio{
+    grid-area: middle;
+    background-color: #7334bb;
+    text-align: center;
+}
+
+.direita{
+    grid-area: right;
+    background-color: #1d9e57;
+    text-align: right;
+}
+
+.footer{
+    grid-area: footer;
+    background: #c94d1c;
+    padding: 30px;
+}
+
+.direita, .esquerda, .meio, .meio2{
+    padding: 30px;
+    white-space: pre-line;
+}
+
+table{
+    width: 100%;
+}
+
+td [href $= "e"]{
+    color: red;
+}
+
+#box1{
+    text-align: center;
+    width: 90%;
+    height: 20%;
+    background: #74accc;
+    border-radius: 30%;
+} */
