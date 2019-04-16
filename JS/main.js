@@ -7,6 +7,9 @@ var frase = "Olar";
 var verdade = true;
 
 var num = numero + numero2;
+
+var mouse_x;
+var mouse_y;
 /* document.write(num); */
 
 /* var nome = prompt("Escreva seu nome:", "Nome aqui..."); */
@@ -64,7 +67,7 @@ else
 
 //Criando Vetores
 
-var linguagens = ["javaScipt", "Java", "Cascade Style Sheet", "HTML", "Python", "C#", "C++"];
+/* var linguagens = ["javaScipt", "Java", "Cascade Style Sheet", "HTML", "Python", "C#", "C++"];
 
 var series = [];
 series[0] = "Mr. Robot";
@@ -99,7 +102,127 @@ for (var i = 0; i < carros.length; i++)
     }
     document.write("</tr>");
 }
-document.write("</table>");
+document.write("</table>"); */
+
+var movimentoMouse = function(e)
+{
+    mouse_x = e.x;
+    mouse_y = e.y;
+}
+
+var _mouseUp = function(e)
+{
+    mouse_pressed = false;
+
+    console.log("Mouse release");
+}	
+
+var _mouseDown = function(e)
+{
+    mouse_pressed = true
+    console.log("Mouse pressed");
+}
+
+var el = document.getElementById("mostrar");
+
+el.addEventListener("click", function() {
+    alert("ALOW");
+}, false);
+
+// registrando as fun��es
+document.addEventListener("mousemove", movimentoMouse, false);
+document.addEventListener("mouseup",   _mouseUp,   false);
+document.addEventListener("mousedown", _mouseDown, false);
+
+function historia(parte)
+{
+    switch(parte)
+    {
+        case 1:
+            document.getElementById("historia_1").innerHTML = document.getElementById("historia_1").innerHTML + "<BR>Era uma vez um botão que modificava o conteúdo interno de elementos HTML...";
+            break;
+        case 2:
+            document.getElementById("historia_2").innerHTML = "Esse tipo de mofificação é versátil pois muda o site confome a demanda do usuário.";
+            break; 
+        case 3:
+            var divs = document.getElementsByClassName("historia");
+            divs[0].innerHTML = "Inclusive exemplos juntos de classes.";
+            divs[1].innerHTML = "Inclusive exemplos juntos de classes.";
+            divs[2].innerHTML = "Inclusive exemplos juntos de classes.";
+            break;
+    }
+}
+
+function ocultar(tag)
+{
+    $("#" + tag).hide("slow");
+}
+
+function ocultarClasse()
+{
+    $(".meio").hide("slow");
+    $(".direita").hide("slow");
+    $(".esquerda").hide("slow");
+}
+
+function mostrar(tag)
+{
+    $(".meio").show("slow");
+    $(".direita").show("slow");
+    $(".esquerda").show("slow");
+}
 
 
 
+
+
+function Apresentacao()
+{
+    console.log("Olar, estou funcionando");
+    alert("Olar, estou funcionando");
+}
+
+Apresentacao();
+
+var Cumprimento = function(nome)
+{
+    console.log("Olar, sou " + nome + "e estou programando");
+    alert("Olar, sou " + nome + "e estou programando");
+}
+
+Cumprimento();
+
+function Calculo(operacao, num1, num2)
+{
+    switch (operacao)
+    {
+        case "som":
+        case 1:
+            console.log("<br> Soma dos números deu: " + (num1 + num2));
+            break;
+        case "sub":
+        case 2:
+            console.log("<br> Subtração dos números deu: " + (num1 - num2));
+            return (num1 - num2);
+            break;
+        case "div":
+        case 3:
+            console.log("<br> Divisão dos números deu: " + (num1 / num2));
+            break;
+        case "mul":
+        case 4:
+            console.log("<br> Multiplicaçaõ dos números deu: " + (num1 * num2));
+            break;
+        default:
+            console.log("Erro, por favor reinicie a página");
+            
+    }
+}
+
+Calculo("som", 10, 15);
+
+Calculo(1, 100, 150);
+
+var somatoria = Calculo("sub", 150, 20);
+
+console.log(somatoria);
