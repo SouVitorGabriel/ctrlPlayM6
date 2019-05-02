@@ -119,14 +119,14 @@ var _mouseUp = function(e)
 
 var _mouseDown = function(e)
 {
-    mouse_pressed = true
+    mouse_presses = true
     console.log("Mouse pressed");
 }
 
-var el = document.getElementById("mostrar");
+var el = document.getElementById("centrao");
 
 el.addEventListener("click", function() {
-    alert("ALOW");
+    document.getElementById("1").style.backgroundColor = "#00e9ff";
 }, false);
 
 // registrando as fun��es
@@ -134,15 +134,20 @@ document.addEventListener("mousemove", movimentoMouse, false);
 document.addEventListener("mouseup",   _mouseUp,   false);
 document.addEventListener("mousedown", _mouseDown, false);
 
-function historia(parte)
+
+var hist1 = document.getElementById("historia_1");
+
+var hist2 = $("#historia_2");
+
+var historia = function(parte)
 {
     switch(parte)
     {
         case 1:
-            document.getElementById("historia_1").innerHTML = document.getElementById("historia_1").innerHTML + "<BR>Era uma vez um botão que modificava o conteúdo interno de elementos HTML...";
+        hist1.innerHTML = hist1.innerHTML + "<BR>Era uma vez um botão que modificava o conteúdo interno de elementos HTML...";
             break;
         case 2:
-            document.getElementById("historia_2").innerHTML = "Esse tipo de mofificação é versátil pois muda o site confome a demanda do usuário.";
+            hist2.html("<br>Esse tipo de mofificação é versátil pois muda o site confome a demanda do usuário.<br>");
             break; 
         case 3:
             var divs = document.getElementsByClassName("historia");
@@ -158,23 +163,24 @@ function ocultar(tag)
     $("#" + tag).hide("slow");
 }
 
+function ocultarClasse2(tag)
+{
+    $(tag).hide("slow");
+}
+
 function ocultarClasse()
 {
-    $(".meio").hide("slow");
-    $(".direita").hide("slow");
-    $(".esquerda").hide("slow");
+    $(".meio").slideUp("slow");
+    $(".direita").slideUp("slow");
+    $(".esquerda").slideUp("slow");
 }
 
-function mostrar(tag)
+function mostrar()
 {
-    $(".meio").show("slow");
-    $(".direita").show("slow");
-    $(".esquerda").show("slow");
+    $(".meio").slideDown("slow");
+    $(".direita").slideDown("slow");
+    $(".esquerda").slideDown("slow");
 }
-
-
-
-
 
 function Apresentacao()
 {
@@ -182,7 +188,6 @@ function Apresentacao()
     alert("Olar, estou funcionando");
 }
 
-Apresentacao();
 
 var Cumprimento = function(nome)
 {
@@ -190,7 +195,6 @@ var Cumprimento = function(nome)
     alert("Olar, sou " + nome + "e estou programando");
 }
 
-Cumprimento();
 
 function Calculo(operacao, num1, num2)
 {

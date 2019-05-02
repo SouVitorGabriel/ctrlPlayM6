@@ -5,7 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>qualquer titulo de site</title>
     <link rel="stylesheet" type="text/css" media="screen" href="aulastyle.css">
-    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script> -->
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
 	<div class="grid-container">
@@ -31,7 +32,9 @@
             <br>
             ESQUERDASSA
             <br>
-            <div onclick="historia(1);">CLICK-ME</div>
+            <p>
+                <div onclick="historia(1);">CLICK-ME</div>
+            </p>
         </div>
         <div id = "2" class="meio">
             CENTRO
@@ -42,7 +45,7 @@
             <br>
             CENTRAO
             <br>
-            <div onclick="historia(2);">CLICK-ME</div>
+            <div id="centrao" onclick="historia(2);">CLICK-ME</div>
         </div>
         <div id = "3" class="direita">
             DIREITA AQUI
@@ -59,7 +62,7 @@
             <br>
             <div onclick="ocultar(1);">OCULTAR-LHE PRIMEIRO</div>
             <br>
-            <div onclick="ocultar(2);">OCULTAR-LHE SEGUNDO</div>
+            <div onclick="ocultarClasse2('.meio');">OCULTAR-LHE SEGUNDO PELA CLASSE</div>
             <br>
             <div onclick="ocultar(3);">OCULTAR-LHE TERCEIRO</div>
             <br>
